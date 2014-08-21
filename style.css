@@ -1,0 +1,54 @@
+body{
+	margin:0;
+}
+#contenteditor{
+	position:relative;
+}
+@font-face{
+	font-family:Ubuntu;
+	src:url(UbuntuMono-B.ttf) format(truetype);
+}
+.pane{
+	display: inline-block;
+	height:23px;
+	margin:0 0 0 40px;
+	font-family: Ubuntu, monospace;
+	width:200px;
+	cursor:pointer;
+	background-color:#272822;
+	color:#ccc;
+	border-top-left-radius: 10px;
+	text-align: center;
+	padding:7px 0 0 0;
+	border-top-right-radius: 10px;
+}
+.activepane{
+	box-shadow: 0 0 10px #ccc inset;
+}
+.editordom{
+	top:0;
+	position:absolute;
+	width:50%;
+	height:400px;
+	font-family: Ubuntu, monospace;
+	opacity:1;
+
+	-webkit-transition: opacity .3s linear;
+	-o-transition: opacity .3s linear;
+	transition: opacity .3s linear;
+}
+#css{
+	display:none;
+	opacity: 0;
+}
+#js{
+	display:none;
+	opacity:0;
+}
+iframe{
+	position:absolute;
+	right:0;
+	top:32px;
+	width:50%;
+	height:500px;
+}
